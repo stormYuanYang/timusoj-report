@@ -1,6 +1,9 @@
 #MIT License
 #Copyright (c) 2018 yangyuan
 
+# 这个代码并没有Accepted，运行时错误，暂时不知道为什么
+
+
 # 国际象棋中的骑士和中国象棋中的马的走法是一样的
 # 并且没有"撇脚马"的限制, 是真正的威风八面
 import sys
@@ -24,7 +27,7 @@ for inputStr in sys.stdin:
         if (h == 1 or h == 8) or (v == 1 or v == 8):
             if (h == v) or (h + v == 9):
                 print(2)
-            elif (h == 1 and (v == 2 or v == 7)) or (h == 8 and (v == 2 or v == 7)):
+            elif (h == 1 or h == 8) and (v == 2 or v == 7) or (v == 1 or v == 8) and (h == 2 or h == 7):
                 print(3)
             else:
                 print(4)
